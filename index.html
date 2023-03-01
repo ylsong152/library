@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>EZ Library</h1>
+        <button id="add-book">Add a book</button>
+
+        <form id="popup-form"action="?">
+            <label for="book-title">*Title:</label>
+            <input type="text" id="book-title" name="book-title" required>
+            <label for="book-author">*Author:</label>
+            <input type="text" id="book-author" name="book-author" required>
+            <label for="pages">*No. of pages:</label>
+            <input type="number" id="pages" name="pages" required>
+
+            <fieldset role="radiogroup">
+                <legend>Read book?</legend>
+                    <div class="radio-container">
+                        <div class="radio">
+                            <input type="radio" id="yes" name="read" value="Yes" checked required>
+                            <span>Yes</span>
+                        </div>  
+                        <div class="radio">
+                            <input type="radio" id="no" name="read" value="No">
+                            <span>No</span>
+                        </div>  
+                    </div>
+            </fieldset>
+
+            <button id="submit-btn" type="button">Submit</button>
+            <button id="return-btn" type="button">Return</button>
+            <p id="error-msg"></p>
+        </form>
+
+        <div id="book-display">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Read</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="book-collection">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
